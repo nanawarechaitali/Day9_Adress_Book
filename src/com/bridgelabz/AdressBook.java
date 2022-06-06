@@ -1,46 +1,37 @@
 package com.bridgelabz;
 
 public class AdressBook {
-    private String fname;
-    private String lname;
-    private long phonenumber;
-    private Address address;
+    private String city;
+    private long zip;
+    private String state;
 
-    public long getPhonenumber() {
-        return phonenumber;
+    public String getCity() {
+        return city;
     }
 
-    public void setPhonenumber(long phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setCity(String city) {
+        this.city = city;
     }
 
-    public String getFname() {
-        return fname;
+    public long getZip() {
+        return zip;
     }
 
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setZip(long zip) {
+        this.zip = zip;
     }
 
-    public String getLname() {
-        return lname;
+    public String getState() {
+        return state;
     }
 
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
+    public void setState(String state) {
+        this.state = state;
     }
 
     @Override
     public String toString() {
-        return "Person [fname=" + fname + ", lname=" + lname + ", address="
-                + address + "]";
+        return "Address [city=" + city + ", zip=" + zip + ", state=" + state
+                + "]";
     }
 }
