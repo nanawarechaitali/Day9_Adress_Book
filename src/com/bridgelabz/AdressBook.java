@@ -1,46 +1,36 @@
 package com.bridgelabz;
+import java.util.Scanner;
+
 
 public class AdressBook {
-    private String fname;
-    private String lname;
-    private long phonenumber;
-    private Address address;
+    static Scanner s=new Scanner(System.in);
+    public static void main(String[] args) {
+        AddressManagerInterface manager = new AddressManager();
+        System.out.println("Welcome to Address");
+        do {
+            System.out.println("Make a choice from below");
+            System.out
+                    .println("1. Create\t 2. Open\t 3. Save\t4. Save As\t 5.Quit");
 
-    public long getPhonenumber() {
-        return phonenumber;
+            switch (s.nextInt()) {
+                case 1:
+                    manager.create();
+                    break;
+                case 2:
+                    manager.open();
+                    break;
+                case 3:
+                    manager.save();
+                    break;
+                case 4:
+                    manager.saveAs();
+                    break;
+                case 5:
+                    manager.quit();
+                    break;
+            }
+        } while (true);
+
     }
 
-    public void setPhonenumber(long phonenumber) {
-        this.phonenumber = phonenumber;
-    }
-
-    public String getFname() {
-        return fname;
-    }
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-    public String getLname() {
-        return lname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "Person [fname=" + fname + ", lname=" + lname + ", address="
-                + address + "]";
-    }
 }
